@@ -26,8 +26,11 @@
       //1. Create virtual DOM
       const VirtualDOM = (
         <div>
-          <h1>frameWork</h1>
-          <ul></ul>
+          <ul>
+            {data.map((item) => {
+              return <li>item</li>;
+            })}
+          </ul>
         </div>
       );
       ReactDOM.render(VirtualDOM, document.getElementById("test"));
