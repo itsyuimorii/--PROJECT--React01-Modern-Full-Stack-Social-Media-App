@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>jsx syntax</title>
+    <title>jsx语法规则</title>
     <style>
       .title {
         background-color: orange;
@@ -26,7 +26,7 @@
 
     <script type="text/babel">
       const myId = "itsyuimorii";
-      const myData = "Hello,react";
+      const myData = "HeLlo,rEaCt";
 
       //1.创建虚拟DOM
       const VirtualDOM = (
@@ -36,11 +36,14 @@
               {myData.toLowerCase()}
             </span>
           </h2>
+          <h2 className="title" id={myId.toUpperCase()}>
+            <span style={{ color: "white", fontSize: "29px" }}>
+              {myData.toLowerCase()}
+            </span>
+          </h2>
           <input type="text" />
         </div>
       );
-      //2.渲染虚拟DOM到页面
-      ReactDOM.render(VirtualDOM, document.getElementById("test"));
     </script>
   </body>
 </html>
