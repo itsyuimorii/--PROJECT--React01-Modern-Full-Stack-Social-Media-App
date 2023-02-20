@@ -27,7 +27,7 @@
           console.log(`name is ${this.name},age is ${this.age}`);
         }
       }
-      /*     ////創建一個person的實例對象
+      /* //創建一個person的實例對象
       const person1 = new Person("tom", "18");
       const person2 = new Person("jerry", "19");
 
@@ -40,7 +40,7 @@
         constructor(name, age, grade) {
           super(name, age);
           this.grade = grade;
-          this.school = "BootXamp";
+          this.school = "BootCamp";
         }
         //重写从父类继承过来的方法
         speak() {
@@ -55,6 +55,9 @@
           console.log("study methods");
         }
       }
+      const s1 = new Student("name", 11, "grade");
+
+      console.log(s1);
 
       class Car {
         constructor(name, price) {
