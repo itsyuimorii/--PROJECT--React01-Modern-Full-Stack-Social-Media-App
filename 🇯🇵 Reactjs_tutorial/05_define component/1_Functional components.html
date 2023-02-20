@@ -21,7 +21,7 @@
     <script type="text/babel">
       // 1. Create functional components
       function MyComponent() {
-        console.log(this); //此处的this是undefined，因为babel编译后开启了严格模式
+        console.log(this); //output: undefined, because babel is compiled with strict mode on
         return (
           <h2>
             {" "}
