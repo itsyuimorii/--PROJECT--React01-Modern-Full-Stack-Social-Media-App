@@ -27,11 +27,11 @@
           super(props);
           //Initialization status
           this.state = { isHot: false, wind: "wind" };
-          //解决changeWeather中this指向问题
+          //Solve the `this` pointing problem in `changeWeather`
           this.changeWeather = this.changeWeather.bind(this);
         }
 
-        //render调用几次？ ———— 1+n次 1是初始化的那次 n是状态更新的次数
+        // How many times is render called? ---- 1+n times, 1 is the time of initialization n is the number of state updates
         render() {
           console.log("render");
           //读取状态
@@ -60,7 +60,8 @@
           //this.state.isHot = !isHot //这是错误的写法
         }
       }
-      //2.渲染组件到页面
+      //2.渲染组件到页面. 如果有多个渲染同一个容器，后面的会将前面的覆盖掉
+
       ReactDOM.render(<Weather />, document.getElementById("test"));
     </script>
   </body>
