@@ -21,11 +21,11 @@
     <script type="text/babel">
       //1. Create components
       class Weather extends React.Component {
-        //构造器调用 1次
+        //Constructor
         constructor(props) {
           console.log("constructor");
           super(props);
-          //初始化状态
+          //Initialization status
           this.state = { isHot: false, wind: "微风" };
           //解决changeWeather中this指向问题
           this.changeWeather = this.changeWeather.bind(this);
@@ -38,7 +38,7 @@
           const { isHot, wind } = this.state;
           return (
             <h1 onClick={this.changeWeather}>
-              今天天气很{isHot ? "炎热" : "凉爽"}，{wind}
+              The weather today is {isHot ? "HOT" : "COLD"}，{wind}
             </h1>
           );
         }
