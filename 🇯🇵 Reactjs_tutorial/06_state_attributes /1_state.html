@@ -45,7 +45,10 @@
 
         //changeWeather调用几次？ ———— 点几次调几次
         changeWeather() {
-          //changeWeather放在哪里？ ———— Weather的原型对象上，供实例使用
+          //changeWeather放在哪里？ ———— Weather的原型对象上，供实例使用weather實例
+          //通過weather實例調用changeWeather時, changeWeather中的this 就是weather實例
+          //console.log(this); //undefined
+
           //由于changeWeather是作为onClick的回调，所以不是通过实例调用的，是直接调用
           //类中的方法默认开启了局部的严格模式，所以changeWeather中的this为undefined
 
