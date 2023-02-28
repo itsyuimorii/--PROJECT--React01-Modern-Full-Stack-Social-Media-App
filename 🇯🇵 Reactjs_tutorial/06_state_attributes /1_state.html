@@ -26,7 +26,7 @@
           console.log("constructor");
           super(props);
           //Initialization status
-          this.state = { isHot: false };
+          this.state = { isHot: false, wind: "wind" };
           //Solve the `this` pointing problem in `changeWeather`
           this.changeWeather = this.changeWeather.bind(this);
         }
@@ -34,11 +34,11 @@
         // How many times is render called? ---- 1+n times, 1 is the time of initialization n is the number of state updates
         render() {
           console.log("render");
-          //Read Status
+          //读取状态
           const { isHot, wind } = this.state;
           return (
             <h1 onClick={this.changeWeather}>
-              The weather today is {isHot ? "HOT" : "COLD"}
+              The weather today is {isHot ? "HOT" : "COLD"}，{wind}
             </h1>
           );
         }
