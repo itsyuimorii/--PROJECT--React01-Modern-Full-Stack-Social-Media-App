@@ -34,7 +34,7 @@
         // How many times is render called? ---- 1+n times, 1 is the time of initialization n is the number of state updates
         render() {
           console.log("render");
-          //读取状态
+          // Read status
           const { isHot, wind } = this.state;
           return (
             <h1 onClick={this.changeWeather}>
