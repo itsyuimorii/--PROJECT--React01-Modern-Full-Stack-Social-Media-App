@@ -23,7 +23,7 @@
       class MyComponent extends React.Component {
         render() {
           // where is render()？—— on the prototype object of MyComponent for use by the instance.
-          //what is this in render？—— MyComponent instance object of the <=> MyComponent component instance object。
+          //this => component instance object
           console.log("render中的this:", this);
           return (
             <h2>
