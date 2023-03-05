@@ -37,6 +37,7 @@
           // Read status
           const { isHot, wind } = this.state;
           return (
+            //<h1 onClick={demo()}> The weather today is {isHot ? "HOT" : "COLD"} </h1>
             <h1 onClick={this.changeWeather}>
               The weather today is {isHot ? "HOT" : "COLD"}，{wind}
             </h1>
@@ -66,6 +67,8 @@
       //2.渲染组件到页面. 如果有多个渲染同一个容器，后面的会将前面的覆盖掉
 
       ReactDOM.render(<Weather />, document.getElementById("test"));
+
+      function demo() {}
     </script>
   </body>
 </html>
