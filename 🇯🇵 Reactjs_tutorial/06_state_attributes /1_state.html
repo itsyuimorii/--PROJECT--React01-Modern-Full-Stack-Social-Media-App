@@ -38,6 +38,7 @@
           const { isHot, wind } = this.state;
           return (
             //<h1 onClick={demo()}> The weather today is {isHot ? "HOT" : "COLD"} </h1>
+            //TODO: 這的this 並沒有通過實例調到changeWeather,而是通過原型鏈查找到了changeWeather, 然後就把這個函數作為回調交給了onClick,這裡是直接到堆中拉出來直接使用
             <h1 onClick={this.changeWeather}>
               The weather today is {isHot ? "HOT" : "COLD"}，{wind}
             </h1>
