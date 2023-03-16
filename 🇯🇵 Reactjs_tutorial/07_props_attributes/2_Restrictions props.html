@@ -35,19 +35,21 @@
       }
       // Restrictions on type, necessity of label attributes
       Person.propTypes = {
-        name: PropTypes.string.isRequired, //限制name必传，且为字符串
-        gender: PropTypes.string, //限制gender为字符串
-        age: PropTypes.number, //限制age为数值
-        speak: PropTypes.func, //限制speak为函数
+        name: PropTypes.string.isRequired,
+        gender: PropTypes.string,
+        age: PropTypes.number,
+
+        //instead of using function name
+        speak: PropTypes.func,
       };
-      //指定默认标签属性值
+      //setup default properties
       Person.defaultProps = {
         gender: "female",
         age: 18,
       };
 
       ReactDOM.render(
-        <Person name={100} speak={speak} />,
+        <Person name="jerry" speak={speak} />,
         document.getElementById("test1")
       );
       ReactDOM.render(
@@ -56,12 +58,14 @@
       );
 
       const p = { name: "Test3", age: 18, gender: "male" };
-      // console.log('@',...p);
+      // console.log("@", ...p);
       // ReactDOM.render(<Person name={p.name} age={p.age} gender={p.gender}/>,document.getElementById('test3'))
+
+      //Batch delivery of props
       ReactDOM.render(<Person {...p} />, document.getElementById("test3"));
 
       function speak() {
-        console.log("我说话了");
+        console.log("speak method called");
       }
     </script>
   </body>

@@ -20,7 +20,9 @@
       }
       console.log(sum(1, 2, 3, 4)); //10
 
-      //构造字面量对象时使用展开语法
+      // Use the expand syntax when constructing literal objects
+
+      //Shallow-cloning (excluding prototype) or merging of objects is possible using a shorter syntax than Object.assign().
       let person = { name: "tom", age: 18 };
       //複製一份person
       let person2 = { ...person };
