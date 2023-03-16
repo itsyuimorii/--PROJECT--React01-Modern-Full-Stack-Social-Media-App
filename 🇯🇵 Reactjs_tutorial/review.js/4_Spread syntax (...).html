@@ -13,11 +13,12 @@
       let arr3 = [...arr1, ...arr2];
       // Usage02: Passing parameters in a function
       function sum(...numbers) {
+        //reduce method (2 parameters)
         return numbers.reduce((preValue, currentValue) => {
           return preValue + currentValue;
         });
       }
-      console.log(sum(1, 2, 3, 4));
+      console.log(sum(1, 2, 3, 4)); //10
 
       //构造字面量对象时使用展开语法
       let person = { name: "tom", age: 18 };
